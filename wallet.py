@@ -101,16 +101,11 @@ private_key_compressed += private_key[2:66]
         
 niv_deriv = int(input("Enter a derivation level"))
 index = int(input("Specify an index"))
-i = 0
 
-while(i < niv_deriv):       
+child_key = ''
+for i in range(niv_deriv):       
 
-    i += 1
-    if (i == niv_deriv):
-        ind = index
-    else:
-        ind = 0
-    data = public_key_compressed + str(c) + str(ind)
+    data = public_key_compressed + str(c) + str(index)
     
     key = hmac.new(data.encode(), digestmod=hashlib.sha512).digest()
     result = private_key_compressed.encode() + key
@@ -118,5 +113,4 @@ while(i < niv_deriv):
     child_key =result[:32]
     child_chaincode = result[32:]
             
-    print("The child key is : ", child_key)
-    
+print("The child key is : ", child_key)
