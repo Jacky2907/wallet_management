@@ -13,9 +13,12 @@ The process is described as follow :
 The process is described as follow :
 ![image](https://user-images.githubusercontent.com/72750889/193474009-a9043f13-f7ff-41ed-bebe-3873fcd68b16.png)
 
+*I found it hard to generate children keys. However, i tried some code based on some external ressources and my comprehension of the process*
+
 # Constraints
   - No imported precompiled libraries (EG Bitcoin lib)
   - Use of Python or JS (Python in our case)
   - Allow to use libraries for maths, the generation of public keys, code verification
 
 
+*The code isn't in his final state. Still have some issues. To be continued....*
